@@ -11,17 +11,17 @@ public class Logger {
     }
 
     public void debug(String message) {
-        if (isDebugEnabled()) {
+        if(isDebugEnabled()) {
             System.out.println(message);
         }
     }
 
     public void example() {
         // BEGIN debug_optimised
-Logger logger = new Logger();
-if (logger.isDebugEnabled()) {
-    logger.debug("Look at this: " + expensiveOperation());
-}
+        Logger logger = new Logger();
+        if(logger.isDebugEnabled()) {
+            logger.debug("Look at this: " + expensiveOperation());
+        }
         // END debug_optimised
     }
 
@@ -31,7 +31,7 @@ if (logger.isDebugEnabled()) {
 
     // BEGIN debug_lambda
     public void debug(Supplier<String> message) {
-        if (isDebugEnabled()) {
+        if(isDebugEnabled()) {
             debug(message.get());
         }
     }
@@ -39,8 +39,8 @@ if (logger.isDebugEnabled()) {
 
     public void exampleWithLambda() {
         // BEGIN debug_optimised_lambda
-Logger logger = new Logger();
-logger.debug(() -> "Look at this: " + expensiveOperation());
+        Logger logger = new Logger();
+        logger.debug(() -> "Look at this: " + expensiveOperation());
         // END debug_optimised_lambda
     }
 
