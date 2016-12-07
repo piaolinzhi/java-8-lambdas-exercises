@@ -1,9 +1,16 @@
-# Idea
+#filter target directory.
+target/
+*~
+*.class
+# Package Files #
+*.jar
+*.war
+*.ear
+.project
+.settings/
+.classpath
+.checkstyle
+*.~$lock
+.svn/
 .idea
 *.iml
-
-# Maven
-target/
-
-# Vim
-*.swp
